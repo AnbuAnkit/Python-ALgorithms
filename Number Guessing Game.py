@@ -23,7 +23,7 @@ def game(r1, r2):
             else:
                 print("Your answer is correct!")
 
-    if c == 0:
+    if c <= 0:
         print("Sorry but you have lost the game... better luck next time!")
 
 game(num1, num2)
