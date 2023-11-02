@@ -1,11 +1,18 @@
 import random
 import re
 
-def nameChecker:
+def nameChecker():
+    global name
     name = str(input("Please enter a name:"))
+    x = re.search("/ ", name)
     if len(name) < 2:
         print("Name cannot be this small, try somthing else")
         nameChecker()
+    elif x != None:
+        print("Name cannont cannot spaces... Write a single word.")
+        nameChecker()
+    else:
+        print("You've got 5 chances to guess the correct word! Good luck!")
 nameChecker()
 
 name = name.upper()
