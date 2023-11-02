@@ -1,7 +1,14 @@
 import random
+import re
 
-name = "Ankit"
+def nameChecker:
+    name = str(input("Please enter a name:"))
+    if len(name) < 2:
+        print("Name cannot be this small, try somthing else")
+        nameChecker()
+nameChecker()
 
+name = name.upper()
 l = []
 r = random.randint(0, len(name) - 1)
 c = 4
@@ -16,6 +23,7 @@ def loop():
     global response
 
     response = str(input("Please enter a letter:"))
+    response = response.upper()
 
     if c == 0:
         print("Game over! Better luck next time.")
