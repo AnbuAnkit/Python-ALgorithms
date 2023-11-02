@@ -1,10 +1,10 @@
 import random
 import re
-
+#print(type("a"))
 def nameChecker():
     global name
     name = str(input("Please enter a name:"))
-    x = re.search("/ ", name)
+    x = re.search("\ ", name)
     if len(name) < 2:
         print("Name cannot be this small, try somthing else")
         nameChecker()
@@ -25,25 +25,28 @@ for i in name:
 
 randomLetter = l[r]
 
-def loop():
+def wordGame():
     global c
     global response
 
+    print("Your word =", name)
+
     response = str(input("Please enter a letter:"))
     response = response.upper()
+
 
     if c == 0:
         print("Game over! Better luck next time.")
     elif c == 1:
         print("Last Chance!")
         c -= 1
-        loop()
+        wordGame()
     else:
         if response != randomLetter:
             c -= 1
             print("Wrong!")
-            loop()
+            wordGame()
         else:
             print("You won! Your answer is correct.")
 
-loop()
+wordGame()
