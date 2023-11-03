@@ -1,0 +1,2 @@
+Simple calculator
+Monthly reminder
