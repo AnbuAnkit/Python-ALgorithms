@@ -1,13 +1,14 @@
 import time
 import re
 
-def checker():
+def stringChecker():
+    global string
     string = str(input("Please enter your target word:"))
 
-    if strin
-
-
-
+    if re.search("\ ", string) != None:
+        print("Your word cannot contain spaces! or try to write a single word.")
+        stringChecker()
+stringChecker()
 string = string.upper()
 
 x = 0
