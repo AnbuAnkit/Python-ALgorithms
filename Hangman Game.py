@@ -1,3 +1,5 @@
+import time
+
 string = "ankit"
 string = string.upper()
 
@@ -12,5 +14,9 @@ while x < len(l) - 2:
     x += 1
 dash = "".join(dash)
 
-print("Guess the correct word! \nYour hint is:")
-print( l[0], dash, l[len(l) - 1], sep="")
+print("Guess the correct word! \nYour hint is given below:")
+print(l[0], dash, l[len(l) - 1], sep="")
+
+time.sleep(3)
+
+response = str(input("Enter your answer:"))
