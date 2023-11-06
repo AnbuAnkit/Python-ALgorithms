@@ -1,4 +1,5 @@
 
+
 def checker():
     global plr1
     global plr2
@@ -19,17 +20,10 @@ x = 0
 dash = []
 duplicatePlr1 = str(plr1)
 
-for i in duplicatePlr1:
-    dash.append(i)
+print(plr1)
+print(len(plr1))
 
-while x < len(dash):
-    int(dash[x])
-    x += 1
-
-for i in dash:
-    print(type(i))
-
-print(duplicatePlr1)
+print(dash)
 
 plr1Counter = 0
 plr2Counter = 0
