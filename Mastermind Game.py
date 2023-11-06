@@ -14,4 +14,27 @@ def checker():
         checker()
 checker()
 
-print(plr1)
+x = 0
+
+dash = []
+duplicatePlr1 = str(plr1)
+
+for i in duplicatePlr1:
+    dash.append(i)
+
+while x < len(dash):
+    int(dash[x])
+    x += 1
+
+for i in dash:
+    print(type(i))
+
+print(duplicatePlr1)
+
+plr1Counter = 0
+plr2Counter = 0
+
+if plr2 == plr1:
+    print("Correct! Now its player 1's chance to make guesses...")
+else:
+    print("Wrong!")
