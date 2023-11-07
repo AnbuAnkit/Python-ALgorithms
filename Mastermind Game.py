@@ -49,19 +49,20 @@ def checker():
     else:
         print("Wrong!")
         plr2Counter += 1
-        print("Here your hint, try again.")
+        print("Heres your hint, try again.")
 
         if plr2Counter == 1:
             while x <= 1:
                 dash[x] = "_"
                 x += 1
                 string = "".join(dash)
-                print(string)
+            print(string)
         else:
             while x <= 2:
                 dash[x] = "_"
                 x += 1
                 string = "".join(dash)
-                print(string)
+            print(string)
+        checker()
 checker()
 #UNDER DEVELOPMENT#
