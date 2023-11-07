@@ -7,15 +7,8 @@ def intialInput():
     if plr1 < 100 or plr1 > 999:
         print("Please enter a number given by the spacified range.")
         intialInput()
-
-    plr2 = 456
-    if plr2 < 100 or plr2 > 999:
-        print("Please enter a number given by the specified range.")
-        intialInput()
 intialInput()
 #########
-
-#CODE UNDER DEVELOPMENT#
 
 
 
@@ -32,10 +25,39 @@ dash = [int(i) for i in parentDash]
 
 
 #CHECKER FUNCTION
-if plr2 == plr1:
-    print("Correct!")
-else:
-    print("Wrong!")
-    print("Here your hint, try again.")
+plr1Counter = 0
+plr2Counter = 0
 
-#EXPERIMENT#
+def checker():
+    global plr2Counter
+    global plr1Counter
+    x = 0
+    
+    def plr2input():
+        plr2 = int(input("Your response?:"))
+        if plr2 < 100 or plr2 > 999:
+            print("Please enter a number given by the specified range.")
+            plr2input()
+    plr2input()
+    
+    if plr2 == plr1:
+        print("Correct!")
+    else:
+        print("Wrong!")
+        plr2Counter += 1
+        print("Here your hint, try again.")
+        
+        if plr2Counter == 1:
+            while x <= 1:
+                dash[x] = "_"
+                x += 1
+                string = "".join(dash)
+                print(string)
+        else:
+            while x <= 2:
+                dash[x] = "_"
+                x += 1
+                string = "".join(dash)
+                print(string)
+checker()
+#UNDER DEVELOPMENT#
