@@ -13,13 +13,12 @@ intialInput()
 
 
 #DASH CONSTRUCTOR
-parentDash = []
+strPlr1 = str(plr1)
+dash = []
 
-stringPlr1 = str(plr1)
+for i in strPlr1:
+    dash.append(i)
 
-for i in stringPlr1:
-    parentDash.append(i)
-dash = [int(i) for i in parentDash]
 #########
 
 
@@ -31,22 +30,27 @@ plr2Counter = 0
 def checker():
     global plr2Counter
     global plr1Counter
+    global plr1
+    global plr2
+
     x = 0
-    
+
     def plr2input():
+        global plr2
+
         plr2 = int(input("Your response?:"))
         if plr2 < 100 or plr2 > 999:
             print("Please enter a number given by the specified range.")
             plr2input()
     plr2input()
-    
+
     if plr2 == plr1:
         print("Correct!")
     else:
         print("Wrong!")
         plr2Counter += 1
         print("Here your hint, try again.")
-        
+
         if plr2Counter == 1:
             while x <= 1:
                 dash[x] = "_"
