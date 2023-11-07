@@ -1,5 +1,4 @@
-
-
+#INITIANL INPUT
 def checker():
     global plr1
     global plr2
@@ -14,21 +13,18 @@ def checker():
         print("Please enter a number given by the specified range.")
         checker()
 checker()
+#########
 
-x = 0
+#CODE UNDER DEVELOPMENT#
 
-dash = []
-duplicatePlr1 = str(plr1)
+#DASH CONSTRUCTOR
 
-print(plr1)
-print(len(plr1))
+if
 
-print(dash)
-
-plr1Counter = 0
-plr2Counter = 0
-
+#CHECKER FUNCTION
 if plr2 == plr1:
-    print("Correct! Now its player 1's chance to make guesses...")
+    print("Correct!")
 else:
     print("Wrong!")
+    print("Here your hint, try again.")
+
