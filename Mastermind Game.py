@@ -10,8 +10,6 @@ def intialInput():
 intialInput()
 #########
 
-
-
 #DASH CONSTRUCTOR
 strPlr1 = str(plr1)
 dash = []
@@ -20,8 +18,6 @@ for i in strPlr1:
     dash.append(i)
     dupliDash.append(i)
 #########
-
-
 
 #CHECKER FUNCTION
 plr1Counter = 0
@@ -46,12 +42,11 @@ def phase2():
         dupliDash.append(i)
 
     def checker2():
+
         global plr2Counter
         global plr1Counter
         global plr1
         global plr2
-
-        # x = 0
 
         def plr2input():
             global plr2
@@ -64,7 +59,7 @@ def phase2():
         plr2input()
 
         if plr1 == plr2:
-            print("Correct! its player 2's turn now")
+            print("Correct!")
         else:
             print("Wrong!")
             plr1Counter += 1
@@ -84,7 +79,6 @@ def phase2():
                 string = "".join(dupliDash)
                 print(string)
                 checker2()
-
     checker2()
 
 def checker():
@@ -93,7 +87,6 @@ def checker():
     global plr1
     global plr2
 
-    #x = 0
 
     def plr2input():
         global plr2
@@ -105,7 +98,7 @@ def checker():
     plr2input()
 
     if plr2 == plr1:
-        print("Correct! its player 2's turn now")
+        print("Correct! Its player 2's turn now")
         phase2()
     else:
         print("Wrong!")
@@ -127,4 +120,10 @@ def checker():
             print(string)
             checker()
 checker()
-#UNDER DEVELOPMENT#
+
+if plr2Counter > plr1Counter:
+    print("Player 1 won!")
+elif plr2Counter == plr1Counter:
+    print("Its a draw.")
+else:
+    print("Player 2 won!")
